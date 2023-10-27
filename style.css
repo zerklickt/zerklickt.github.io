@@ -1,4 +1,65 @@
-html {
+html, body {
     width: 100%;
     height: 100%;
+    overflow: auto;
+    margin: 0;
+    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    color: white;
+    background-color: #131313;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    /*filter: blur(2px) brightness(50%);*/
+    margin-bottom: 130px;
+}
+
+.parallax > div {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 34pt;
+}
+
+.parallax span {
+    margin-top: 50px;
+}
+
+.parallax * {
+    transition: opacity 0.3s linear, transform 0.1s linear;
+}
+
+.parallax:hover button {
+    opacity: 100%;
+}
+
+.parallax button {
+    background-color: white;
+    color: black;
+    padding: 8px 15px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 20px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.parallax button:hover {
+    transform: scale(1.1);
+}
+
+#projects {
+    background-image: url('res/code.jpg');
 }
